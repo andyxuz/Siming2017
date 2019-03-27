@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+set timeout 60
+spawn ssh andyxu@pps-gateway.uchicago.edu
+expect "password:"
+send "andannhw22121\r"
+send "\r"
+expect "$ "
+send "ssh spudhead\r"
+expect "password:"
+send "andannhw22121\r"
+expect "$ "
+send "ql\r"
+interact
